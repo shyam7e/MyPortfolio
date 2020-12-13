@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+
+    </script>
+
+
+    <script defer>
+        
+          
+        
+        window.onload = () => {
+
+            var hamburger=document.getElementById("hamburger");
+          hamburger.addEventListener("click",()=>{
+              var doc1=document.getElementById("menu");
+              doc1.classList.toggle('hide');
+              console.log('hi hello');
+          });
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            var box3 = document.getElementById("box3");
+            var box4 = document.getElementById("box4");
+            var box5 = document.getElementById("box5");
+
+            var home = document.getElementById("home");
+            var project = document.getElementById("project");
+            var skills = document.getElementById("skills");
+            var about = document.getElementById("about");
+            var contact = document.getElementById("contact");
+            // gsap.from(".imgg",{duration:2,opacity:0,x:-800});
+            // gsap.from("p",{duration:2,opacity:0,y:500});
+            var closebtn=document.getElementsByClassName("tomato");
+            for(let i=0;i<closebtn.length;i++)
+            {
+                closebtn[i].addEventListener("click",()=>{
+                    var p=closebtn[i].parentElement;
+                    var p1=p.parentElement;
+                        p1.style.display="none";
+                });
+
+            }
+         
+           var toglebtn= document.getElementById('checkbox');
+           toglebtn.addEventListener("change",(e)=>{
+                if(e.target.checked)
+                {
+                    document.getElementById('label').innerHTML="Light Mode";
+                   document.body.classList.toggle("dm");
+                   
+                  // var mainContainer=document.querySelector('.nav-ul').classList.toggle('dark-mode');
+                   
+                    var mainContaine=document.querySelector('.imgg').classList.toggle('dark-mode');
+                    var mainContain=document.querySelector('.container').classList.toggle('dark-mode');
+                  
+                }
+               else
+                {
+                    document.getElementById('label').innerHTML="Dark Mode";
+                   document.body.classList.toggle("dm");
+                  // var mainContainer=document.querySelector('.nav-ul').classList.toggle('dark-mode');
+                   
+                    var mainContaine=document.querySelector('.imgg').classList.toggle('dark-mode');
+                    var mainContain=document.querySelector('.container').classList.toggle('dark-mode');
+                   
+                }
+
+            });
+
+            box1.style.transform = "translateX(0)";
+            home.addEventListener("click", () => {
+                box1.style.display="block";
+                box1.style.transform = "translateX(0)";
+                box2.style.transform = "translateX(600%)";
+                box3.style.transform = "translateX(600%)";
+                box4.style.transform = "translateX(600%)";
+                box5.style.transform = "translateX(600%)";
+               
+            });
+            project.addEventListener("click", () => {
+                box2.style.display="block";
+                box2.style.transform = "translateX(0)";
+                box1.style.transform = "translateX(600%)";
+                box3.style.transform = "translateX(600%)";
+                box4.style.transform = "translateX(600%)";
+                box5.style.transform = "translateX(600%)";
+               
+            });
+            skills.addEventListener("click", () => {
+                box3.style.display="block";
+                box3.style.transform = "translateX(0)";
+                box1.style.transform = "translateX(600%)";
+                box2.style.transform = "translateX(600%)";
+                box4.style.transform = "translateX(600%)";
+                box5.style.transform = "translateX(600%)";
+                
+            });
+            about.addEventListener("click", () => {
+                box4.style.display="block";
+                box4.style.transform = "translateX(0)";
+                box1.style.transform = "translateX(600%)";
+                box2.style.transform = "translateX(600%)";
+                box3.style.transform = "translateX(600%)";
+                box5.style.transform = "translateX(600%)";
+              
+            });
+            contact.addEventListener("click", () => {
+                box5.style.display="block";
+                box5.style.transform = "translateX(0)";
+                box1.style.transform = "translateX(600%)";
+                box2.style.transform = "translateX(600%)";
+                box3.style.transform = "translateX(600%)";
+                box4.style.transform = "translateX(600%)";
+               
+            });
+           
+        }
+
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+        }
+
+        .container {
+            /* display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            align-items: flex-start; */
+            width: 100%;
+            height: 100vh;
+           
+        }
+
+        .container2 {
+
+            overflow: hidden;
+            transition: 1s ease-in-out;
+            display: flex;
+            /* border: 2px solid black; */
+            position: relative;
+            width: 740px;
+            height: 540px;
+            background-color: #F8F9FA;
+            margin-left: 60px;
+            /* -webkit-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75); */
+        }
+
+        .box {
+            position: absolute;
+            width: 700px;
+            height: 500px;
+            border-radius: 5px;
+            background-color: white;
+            border: 2px solid #E1E1E1;
+            left: 10px;
+            top: 10px;
+            transform: translateX(600%);
+            transition: 1s ease-in-out;
+            -webkit-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+        }
+
+        .tab {
+            width: 100%;
+            height: 20px;
+            background-color: #D9D9D9;
+            border-bottom: 1px solid #ECECEC;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .tomato {
+            background-color: #EB6C64;
+            margin-left: 10px;
+        }
+
+        .orange {
+            background-color: #F6BD5F;
+        }
+
+        .green {
+            background-color: #69C360;
+        }
+
+        .menu {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .nav-ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .nav-ul li {
+            list-style: none;
+            margin: 10px 28px;
+        }
+
+        .nav-ul li a {
+            text-decoration: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            color: black;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+
+        }
+
+        .nav-ul li a:hover {
+            border-bottom: 2px solid #69C360;
+            border-top: 2px solid #69C360;
+            /* background-color: white; */
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+        }
+        .btn
+        {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            color:white;
+            background-color:#EB6C64;
+            letter-spacing: 2px;
+        }
+        input ,textarea
+        {
+            background-color: #F8F9FA;
+            padding: 5px 5px;
+            font-size: 14px;
+            border:1px solid #222222;
+            
+        }
+        .input1
+        {
+            width: 497px;
+        }
+        h1 {
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+        .imgg
+        {
+            position: absolute;;
+            right: 160px;
+            top: 94px;
+            width: 400px;
+            height: 500px;
+            background: url("IMG_20180630_105251_293.jpg");
+            background-position: center;
+            background-size: cover;
+            -webkit-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+            
+        }
+        .imgg:hover>.message
+        {
+            display: block;
+        }
+        .dark-mode
+        {
+            filter: invert(1)hue-rotate(180deg);
+        }
+        .message
+        {
+            background-color:tomato;
+            width: 100px;
+            height: 100px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+            top: 28px;
+            left: -18px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+        .hide
+        {
+            display: flex!important;
+        }
+        .dm
+        {
+            background-color: black!important;
+        }
+        @media (max-width:990px){
+           
+            .container2,.box,.imgg{
+               display: none;
+            }
+            .hamburger
+            {
+                display: flex;
+            }
+            .nav-ul{
+                flex-direction: column;
+                margin: auto;
+               
+            }
+            .menu
+            {
+                height: 50vh;
+                display: none;
+            
+            }
+            .hamburger
+            {
+                display:flex!important;
+            }
+        }
+        
+        .toglebtn
+        {
+            display: flex;
+            width: 150px;
+            height: 40px;
+            position:absolute;
+            right:80px;
+            top: 25px;
+        }
+        #checkbox
+        {
+            width: 40px;
+            height: 20px;
+            border-radius:10px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            outline: none;
+            transition: 1s;
+            background-color:black;
+            position: relative;
+        }
+        #checkbox:checked
+        {
+            background-color:#fafafa;
+        }
+        #checkbox::before
+        {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 18px;
+            border-radius: 20px;
+            background-color:#69C360;
+        }
+        #checkbox:checked::before
+        {
+            left:20px;
+        }
+        .hamburger
+        {
+            width: 30px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: none;
+            cursor: pointer;
+        }
+        
+        .line
+        {
+            width:100%;
+            height: 4px;
+            background-color: black;
+            margin: 2px 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="toglebtn">
+            <label id="label" for="checkbox">Dark Mode</label>
+            <input type="checkbox" name="checkbox" id="checkbox">
+        </div>
+        <div class="menu" id="menu">
+            <ul class="nav-ul">
+
+                <li><a href="#home" id="home">Portfolio</a></li>
+                <li><a href="#project" id="project">Projects</a></li>
+                <li><a href="#skills" id="skills">Skills</a></li>
+                <li><a href="#about" id="about">About</a></li>
+                <li><a href="#contact" id="contact">contact</a></li>
+            </ul>
+        </div>
+        <div class="imgg">
+            <div class="message">
+                <span>Lets Talk</span>
+            </div>
+        </div>
+        
+        <div class="container2">    
+            <div class="box" id="box1">
+                <div class="tab">
+                    <div class="circle tomato"></div>
+                    <div class="circle orange"></div>
+                    <div class="circle green"></div>
+                </div>
+                <div class="content">
+                    <h1>Portfolio</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consectetur commodi ipsa at
+                        consequuntur illum quia, impedit corporis incidunt perferendis, eligendi ipsam. Quasi culpa sint
+                        esse, ipsam quas odit inventore.</p>
+                
+                </div>
+
+            </div>
+            <div class="box" id="box2">
+                <div class="tab">
+                    <div class="circle tomato"></div>
+                    <div class="circle orange"></div>
+                    <div class="circle green"></div>
+                </div>
+                <div class="content">
+                    <h1>projects</h1>
+                    <ul>
+                        <li><a href="#">TictacToe</a></li>
+                        <li><a href="#">Todolist</a></li>
+                        <li><a href="#">Insta Login UI Clone</a></li>
+                        <li><a href="#">Facebook login UI Clone</a></li>
+                        <li><a href="#">Covid Stats Using Api</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="box" id="box3">
+                <div class="tab">
+                    <div class="circle tomato"></div>
+                    <div class="circle orange"></div>
+                    <div class="circle green"></div>
+                </div>
+                <div class="content">
+                    <h1>skills</h1>
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>JAVA</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="box" id="box4">
+                <div class="tab">
+                    <div class="circle tomato"></div>
+                    <div class="circle orange"></div>
+                    <div class="circle green"></div>
+                </div>
+                <div class="content">
+                    <h1>about</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consectetur commodi ipsa at
+                        consequuntur illum quia, impedit corporis incidunt perferendis, eligendi ipsam. Quasi culpa sint
+                        esse, ipsam quas odit inventore.</p>
+                </div>
+
+            </div>
+            <div class="box" id="box5">
+                <div class="tab">
+                    <div class="circle tomato"></div>
+                    <div class="circle orange"></div>
+                    <div class="circle green"></div>
+                </div>
+                <div class="content">
+                    <h1>contact</h1> 
+                    <form style="width:600px" action="#" method="POST">
+                        <div>
+                            <input class="input1" type="text" placeholder="Enter Name ex john">
+                        </div>
+                        <div>
+                            <input class="input1" type="email" placeholder="Enter Email ex john@gmail.com">
+                        </div>
+                        <div>
+                            <input class="input1" type="text" placeholder="Enter Subject">
+                        </div>
+                        <div>
+                            <textarea name="" id="" cols="60" rows="10" placeholder="Enter Message"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn" value="Submit">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
