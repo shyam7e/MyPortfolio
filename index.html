@@ -119,8 +119,8 @@
       .nav-ul {
         list-style: none;
         display: flex;
-        width: 100%;
-        justify-content: space-evenly;
+        width: 92%;
+        justify-content:space-evenly;
       }
       .logo {
         width: 18.5%;
@@ -131,22 +131,22 @@
         z-index: 1;
       }
       nav {
-        width: 50%;
+        width: 67%;
         /* background-color: orange; */
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         
       }
       header {
         width: 100%;
         height: 50px;
         display: flex;
-        background:rgba(0, 0, 0,0.1);
+        background:rgba(0, 0, 0,0.5);
         position: fixed;
         top: 0;
         left: 0;
         z-index:100;
-        justify-content: flex-start;
+        justify-content:flex-start;
         
       }
       .nav-li a {
@@ -186,6 +186,7 @@
         justify-self: flex-start;
         align-items: center;
         /* background-color: orange; */
+        
       }
      .pp
      {
@@ -311,7 +312,7 @@
         width: 100%;
         height:auto;
         position: relative;
-        background-attachment: fixed;
+       
         overflow: hidden;
       
       }
@@ -431,6 +432,13 @@ p{
   height:60px;
   margin: 5px;
 }
+.scontainer
+{
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .about
 {
   width: 100%;
@@ -526,7 +534,7 @@ p{
   height: 20px;
   display: none;
   position: absolute;
-  right: 10px;
+  right:15px;
   top:5px;
 }
 .line
@@ -583,6 +591,10 @@ footer .social i
         {
           font-size: 40%;
         }
+        .nav-ul
+        {
+          align-items: center;
+        }
        .text .s1,.s,.name
        {
          width: auto;
@@ -604,6 +616,17 @@ footer .social i
       }
       @media (max-width:600px)
       {
+        .logo svg 
+        {
+          width: 60%;
+          padding-left: 10px;
+        }
+        .logo a
+        {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         .s4
         {
           font-size: 1rem;
@@ -622,13 +645,14 @@ footer .social i
         {
           margin-top: 20px;
           width:100%;
+          text-align: center;
         }
         header
         {
           height: auto;
           width:100%;
-          
           background-color: #222222;
+          justify-content: space-around;
           /* flex-direction: column; */
         }
         .s,.s1,.dot4,.dot
@@ -829,8 +853,7 @@ footer .social i
         </div>
           <div class="box">
             <div class="imgbox">
-              <a href="https://shyam7e.github.io/XO_GAME_JS/
-"><img src="Images/xo.png" alt=""></a>
+              <a href="#"><img src="Images/xo.png" alt=""></a>
             </div>
             <div class="info">
               <h2 class="tc">TicTacToe</h2><p> its a game known as tictactoe also known as X O created this with HTML CSS and JS</p>
@@ -838,7 +861,7 @@ footer .social i
           </div>
             <div class="box">
               <div class="imgbox">
-                <a href="https://shyam7e.github.io/TodoApp/"><img src="Images/todolist.png" alt=""></a>
+                <a href="#"><img src="Images/todolist.png" alt=""></a>
               </div>
               <div class="info">
                 <h2 class="td">TodoList</h2><p>its a Todo app where we can enter our todo's and all todo's gets listed we can add new todo's or remove completed todo's and we can also checklist them</p>
@@ -846,7 +869,7 @@ footer .social i
             </div>
               <div class="box">
                 <div class="imgbox">
-                  <a href="https://shyam7e.github.io/covid_Tracker/"><img src="Images/cd.png" alt=""></a>
+                  <a href="#"><img src="Images/cd.png" alt=""></a>
                 </div>
                 <div class="info">
                   <h2>Covid stats using Api</h2><p>its a Covid 19 Statistics Webpage which lists all States of India with no of stats using javascript fetch API</p>
@@ -879,21 +902,30 @@ footer .social i
     <div class="skills" id="skills">
       <h1 class="proj">My Skills</h1>
       <div class="sbox">
-        
-        <img class="skill" id="html" src="Images/html-5.svg"></img>
-        <img class="skill" id="css" src="Images/css3.svg"></img>
-        <img class="skill" id="js" src="Images/javascript-4.svg"></img>
-        <img class="skill" id="sass" src="Images/sass-1.svg"></img>
-        <img class="skill" id="java" src="Images/java-4.svg"></img>
-        <img class="skill" id="cpp" src="Images/c-2975.svg"></img>
-        <img class="skill" id="c" src="Images/c.svg"></img>
+        <div class="scontainer"><img class="skill" id="html" src="Images/html-5.svg"></img><p>HTML</p></div>
+        <div class="scontainer"> <img class="skill" id="css" src="Images/css3.svg"></img><p>CSS</p></div>
+        <div class="scontainer"><img class="skill" id="js" src="Images/javascript-4.svg"></img><p>JAVASCRIPT</p></div>
+        <div class="scontainer"><img class="skill" id="sass" src="Images/sass-1.svg"></img><p>SASS</p></div>
+        <div class="scontainer"><img class="skill" id="java" src="Images/java-4.svg"></img><p>JAVA</p></div>
+        <div class="scontainer"><img class="skill" id="cpp" src="Images/c-2975.svg"></img><p>C</p></div>
+        <div class="scontainer"> <img class="skill" id="c" src="Images/c.svg"></img><p>CPP</p></div>
+        <div class="scontainer"><img class="skill" id="php" src="Images/php-1.svg"></img><p>PHP</p></div>
        
-        <img class="skill" id="php" src="Images/php-1.svg"></img>
+        
+       
+        
+        
+        
+        
+       
+       
+        
         
       <div id="z">
         <h1 class="proj" >Design tools</h1>
-        <img class="skill" id="xd" src="Images/adobe-xd-1.svg"></img>
-        <img class="skill" id="figma"  src="Images/figma-1.svg"></img>
+        <div class="scontainer"><img class="skill" id="xd" src="Images/adobe-xd-1.svg"></img><p>ADOBEXD</p></div>
+        <div class="scontainer"><img class="skill" id="figma"  src="Images/figma-1.svg"></img><p>FIGMA</p></div>
+        
       </div>
       </div>
       
@@ -909,7 +941,7 @@ footer .social i
              <li class="bf">
                Iam Shyam Etigatti and i like frontEnd
              </li>
-             <li class="bf">always looking to build things for the Web  </li>
+             <li class="bf">Always looking to build things for the Web  </li>
              <li class="bf">
                Iam a Fresher I Graduated BCA recently from Karnataka science college dharwad with 73% 
              </li>
